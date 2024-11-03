@@ -1,0 +1,16 @@
+body {
+  background-color: rgb(35, 36, 36);
+  color: white;
+}
+
+#elemento {
+  margin-top: 7vh;
+  position: relative; /*absolute ou , ou fixed */
+}
+
+.buttons {
+  text-align: center;
+}
+button {
+  margin-top: 3vh;
+}

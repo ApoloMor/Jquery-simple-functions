@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Apolo</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  </head>
+  <body>
+    <div id="elemento">
+      <h3>lorem ipsum</h3>
+    </div>
+    <div class="buttons">
+      <button id="showButton">Mostrar</button>
+      <button id="hideButton">Ocultar</button>
+      <button id="toggleButton">Alternar</button><br />
+      <button id="slideToggleButton">Alternar(Deslizando)</button><br />
+      <button id="fadeToggleButton">Alternar(Fade)</button>
+      <button id="fadeToButton">Opacidade 0.5</button><br />
+      <button id="animateButton">Animação Personalizada</button>
+      <button id="stopButton">Para</button>
+      <button id="finishButton">termina</button>
+    </div>
+    <script>
+      //$("#elemento").hide();
+
+      // Exibe o elemento
+      $("#showButton").click(function () {
+        $("#elemento").show();
+      });
+
+      // Oculta o elemento
+      $("#hideButton").click(function () {
+        $("#elemento").hide();
+      });
+
+      // Alterna entre mostrar e esconder
+      $("#toggleButton").click(function () {
+        $("#elemento").toggle();
+      });
+
+      //Efeito deslizante(slide)
+
+      // Alterna entre slideUp(Oculta) e slideDown(Exibe) em 500ms
+      $("#slideToggleButton").click(function () {
+        $("#elemento").slideToggle(500);
+      });
+
+      //Efeitos de opacidade(Fade)
+
+      // Alterna entre fadeIn e fadeOut em 500ms
+      $("#fadeToggleButton").click(function () {
+        $("#elemento").fadeToggle(500);
+      });
+
+      // Muda a opacidade para 0.5 em 500ms
+      $("#fadeToButton").click(function () {
+        $("#elemento").fadeTo(500, 0.5);
+      });
+
+      //Animação personalizada
+
+      // Anima a posição e opacidade do elemento
+      $("#animateButton").click(function () {
+        $("#elemento").animate({ left: "46%", opacity: "1" }, 3000, "swing");
+      });
+
+      // Para a animação em andamento e cancela a fila
+      $("#stopButton").click(function () {
+        $("#elemento").stop(true, false); // Para e termina no meio da animação
+      });
+
+      // Para todas as animações e termina no estado final
+      $("#finishButton").click(function () {
+        $("#elemento").finish();
+      });
+    </script>
+  </body>
+</html>
